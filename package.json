@@ -2,14 +2,16 @@
   "name": "game-of-thrones-back",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/js/index.js",
+  "type": "module",
   "scripts": {
     "test": "",
     "prepare": "husky",
     "build": "tsc",
     "build:dev": "tsc -w",
     "commitlint": "commitlint --edit",
-    "start": "node ."
+    "start": "node .",
+    "start:dev": "node --watch ."
   },
   "author": "",
   "license": "ISC",
