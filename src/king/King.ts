@@ -1,14 +1,14 @@
 import { Character } from "../character/Character.js";
 
 export class King extends Character {
-  public sentence: string;
+  public sentence: "Vais a morir todos";
   public yearsReigning: number;
 
   public constructor(
     name: string,
     surname: string,
     age: number,
-    sentence: string,
+    sentence: "Vais a morir todos",
     yearsReigning: number,
   ) {
     super(name, surname, age);
