@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "commitlint": "commitlint --edit",
+    "start": "node ."
   },
   "author": "",
   "license": "ISC",
