@@ -6,3 +6,8 @@ export interface Character {
   die: () => void;
   speak: () => string;
 }
+
+export interface King extends Character {
+  sentence: "Vais a morir todos";
+  yearsReigning: number;
+}
