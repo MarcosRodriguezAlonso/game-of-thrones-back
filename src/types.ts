@@ -1,4 +1,4 @@
-export interface Character {
+export interface CharacterStructure {
   name: string;
   surname: string;
   age: number;
@@ -7,7 +7,7 @@ export interface Character {
   speak: () => string;
 }
 
-export interface King extends Character {
-  sentence: "Vais a morir todos";
+export interface KingInterface extends CharacterStructure {
+  sentence: string;
   yearsReigning: number;
 }

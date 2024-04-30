@@ -1,4 +1,6 @@
-export class Character {
+import { CharacterStructure } from "../types.js";
+
+export class Character implements CharacterStructure {
   public name: string;
   public surname: string;
   public age: number;
@@ -10,11 +12,11 @@ export class Character {
     this.age = age;
   }
 
-  private die() {
+  public die() {
     this.isAlive = false;
   }
 
-  private speak() {
+  public speak() {
     return "";
   }
 }
