@@ -1,4 +1,13 @@
-import { King } from "./king/King.js";
-import { KingInterface } from "./types.js";
+import { Fighter } from "./Fighter/Fighter.js";
 
-const joffreyBaratheon: KingInterface = new King("Joffrey", "Baratheon", 14, 2);
+const jaimeLannister = new Fighter(
+  {
+    name: "Jaime",
+    surname: "Lannister",
+    age: 40,
+  },
+  "Axe",
+  9,
+);
+
+console.log(jaimeLannister);

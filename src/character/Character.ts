@@ -1,12 +1,11 @@
-import { CharacterStructure } from "../types.js";
-
-export class Character implements CharacterStructure {
-  public name: string;
-  public surname: string;
-  public age: number;
+export class Character {
   public isAlive = true;
 
-  constructor(name: string, surname: string, age: number) {
+  constructor(
+    public name: string,
+    public surname: string,
+    public age: number,
+  ) {
     this.name = name;
     this.surname = surname;
     this.age = age;
