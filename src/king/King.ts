@@ -1,7 +1,6 @@
-import { Character } from "../character/Character.js";
+import { Character } from "../Character/Character.js";
 
 export class King extends Character {
-  public sentence = "Vais a morir todos";
   public yearsReigning: number;
 
   public constructor(
