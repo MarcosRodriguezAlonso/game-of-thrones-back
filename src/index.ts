@@ -35,3 +35,19 @@ const characters = [
   tyrionLannister,
   bronn,
 ];
+
+const getCharacters = async () =>
+  new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(characters);
+    }, 3000);
+  });
+
+async function callCharacter() {
+  try {
+    const characters = await getCharacters();
+    console.log(characters);
+  } catch (error) {
+    console.error(error);
+  }
+}
