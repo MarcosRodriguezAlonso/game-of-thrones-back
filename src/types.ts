@@ -19,6 +19,11 @@ export interface FighterStructure extends CharacterStructure {
   dexterity: Level;
 }
 
+export interface SquireStructure extends CharacterStructure {
+  master: FighterStructure;
+  servitude: Level;
+}
+
 export interface BasicCharacter {
   name: string;
   surname: string;
