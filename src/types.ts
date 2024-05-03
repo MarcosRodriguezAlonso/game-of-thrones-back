@@ -1,4 +1,4 @@
-import { type Character } from "./Character/Character";
+import { type Character } from "./Character/Character.js";
 
 export type Level = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 export interface CharacterStructure {
@@ -35,4 +35,8 @@ export interface BasicCharacter {
   name: string;
   surname: string;
   age: number;
+}
+
+export interface Characters {
+  characters: Character[];
 }

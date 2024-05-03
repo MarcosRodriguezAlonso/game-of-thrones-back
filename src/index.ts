@@ -1,7 +1,10 @@
+import express, { type Response, request, response } from "express";
 import { Adviser } from "./Adviser/Adviser.js";
 import { Fighter } from "./Fighter/Fighter.js";
 import { King } from "./King/King.js";
 import { Squire } from "./Squire/Squire.js";
+import { type Character } from "./Character/Character.js";
+import { type Characters } from "./types.js";
 
 const joffreyBaratheon = new King("Joffrey", "Baratheon", 14, 2);
 const jaimeLannister = new Fighter(
@@ -28,7 +31,7 @@ const bronn = new Squire(
   3,
 );
 
-const characters = [
+const characters: Character[] = [
   joffreyBaratheon,
   jaimeLannister,
   daenerysTargaryen,
@@ -43,11 +46,12 @@ const getCharacters = async () =>
     }, 3000);
   });
 
-async function callCharacter() {
-  try {
-    const characters = await getCharacters();
-    console.log(characters);
-  } catch (error) {
-    console.error(error);
-  }
-}
+const app = express();
+
+app.listen(4000, () => {
+  console.log("Server listening on 'https://localhost:4000/'");
+});
+
+app.get("/characters", (_req, res: Response<Characters>) => {
+  res.status(200).json({ characters });
+});
