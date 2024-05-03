@@ -1,4 +1,4 @@
-import { Character } from "../Character/Character.js";
+import { Character } from "../CharacterClass/Character.js";
 import { type Level } from "../types.js";
 import { type BasicCharacter } from "../types.js";
 import { type FighterStructure } from "../types.js";

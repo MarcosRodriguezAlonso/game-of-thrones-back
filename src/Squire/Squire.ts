@@ -1,4 +1,4 @@
-import { Character } from "../Character/Character.js";
+import { Character } from "../CharacterClass/Character.js";
 import {
   type BasicCharacter,
   type Level,
