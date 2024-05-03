@@ -1,9 +1,9 @@
 import express, { type Response, request, response } from "express";
 import { Adviser } from "./Adviser/Adviser.js";
 import { Fighter } from "./Fighter/Fighter.js";
-import { King } from "./King/King.js";
+import { King } from "./KingClass/King.js";
 import { Squire } from "./Squire/Squire.js";
-import { type Character } from "./Character/Character.js";
+import { type Character } from "./CharacterClass/Character.js";
 import { type Characters } from "./types.js";
 
 const joffreyBaratheon = new King("Joffrey", "Baratheon", 14, 2);
