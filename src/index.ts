@@ -1,10 +1,11 @@
-import express, { type Response, request, response } from "express";
+import express, { type Response } from "express";
 import { Adviser } from "./Adviser/Adviser.js";
 import { Fighter } from "./Fighter/Fighter.js";
 import { King } from "./KingClass/King.js";
 import { Squire } from "./Squire/Squire.js";
 import { type Character } from "./CharacterClass/Character.js";
 import { type Characters } from "./types.js";
+import cors from "cors";
 
 const joffreyBaratheon = new King("Joffrey", "Baratheon", 14, 2);
 const jaimeLannister = new Fighter(
@@ -39,19 +40,18 @@ const characters: Character[] = [
   bronn,
 ];
 
-const getCharacters = async () =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(characters);
-    }, 3000);
-  });
-
 const app = express();
 
 app.listen(4000, () => {
   console.log("Server listening on 'https://localhost:4000/'");
 });
 
+app.use(cors());
+
 app.get("/characters", (_req, res: Response<Characters>) => {
   res.status(200).json({ characters });
+});
+
+app.use((_req, res) => {
+  res.status(404).json({ error: "Not found" });
 });
