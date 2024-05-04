@@ -1,10 +1,10 @@
 import express, { type Response } from "express";
-import { Adviser } from "./Adviser/Adviser.js";
-import { Fighter } from "./Fighter/Fighter.js";
-import { King } from "./KingClass/King.js";
-import { Squire } from "./Squire/Squire.js";
-import { type Character } from "./CharacterClass/Character.js";
-import { type Characters } from "./types.js";
+import { Adviser } from "./characters/data/Adviser/Adviser.js";
+import { Fighter } from "./characters/data/Fighter/Fighter.js";
+import { King } from "./characters/data/KingClass/King.js";
+import { Squire } from "./characters/data/Squire/Squire.js";
+import { type Character } from "./characters/data/CharacterClass/Character.js";
+import { type Characters } from "./characters/types.js";
 import cors from "cors";
 
 const joffreyBaratheon = new King("Joffrey", "Baratheon", 14, 2);
@@ -32,7 +32,7 @@ const bronn = new Squire(
   3,
 );
 
-const characters: Character[] = [
+export const characters: Character[] = [
   joffreyBaratheon,
   jaimeLannister,
   daenerysTargaryen,

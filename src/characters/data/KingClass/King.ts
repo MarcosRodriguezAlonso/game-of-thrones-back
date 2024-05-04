@@ -1,5 +1,5 @@
 import { Character } from "../CharacterClass/Character.js";
-import { type KingStructure } from "../types.js";
+import { type KingStructure } from "../../types.js";
 
 export class King extends Character implements KingStructure {
   public yearsReigning: number;

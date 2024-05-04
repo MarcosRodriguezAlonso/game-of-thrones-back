@@ -1,7 +1,7 @@
 import { Character } from "../CharacterClass/Character.js";
-import { type Level } from "../types.js";
-import { type BasicCharacter } from "../types.js";
-import { type FighterStructure } from "../types.js";
+import { type Level } from "../../types.js";
+import { type BasicCharacter } from "../../types.js";
+import { type FighterStructure } from "../../types.js";
 
 export class Fighter extends Character implements FighterStructure {
   public sentence = "Primero pego y luego pregunto";
