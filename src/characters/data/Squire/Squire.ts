@@ -4,7 +4,7 @@ import {
   type Level,
   type FighterStructure,
   type SquireStructure,
-} from "../types.js";
+} from "../../types.js";
 
 export class Squire extends Character implements SquireStructure {
   public sentence = "Soy un loser";
